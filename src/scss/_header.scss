@@ -1,0 +1,417 @@
+.header {
+    margin-top: 20px;
+    padding: 13px 0px;
+
+
+    &__wrapper {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+    }
+
+    &__nav {
+        
+    }
+
+    &__logo-link {
+    }
+
+    &__logo-img {
+    }
+
+    &__nav {
+        @media (max-width: 1120px) {
+            display: none;
+        } 
+    }
+
+    &__nav-list {
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+    &__nav-item {
+    }
+
+    &__nav-item:not(:last-child) {
+        margin-right: 24px;
+        @media (max-width: 1120px) {
+            margin-right: 16px;
+        }
+
+        @media (max-width: 992px) {
+            margin-right: 0;
+        }
+    }
+
+    &__nav-link {
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #000;
+        transition: color .3s ease;
+        &:hover {
+            color: #6CAC3D;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 14px;
+        }
+    }
+
+    &__phone {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media (max-width: 992px) {
+            display: flex;
+        }
+
+        @media (max-width: 480px) {
+            display: none;
+        }
+    }
+
+    &__phone-wrapper {
+        display: flex;
+    }
+
+    &__phone_link {
+        margin-right: 5px;
+        color: #000;
+        transition: all .3s ease;
+        
+           
+    }
+
+    &__phone-svg {
+        transform: translateY(3px);
+        transition: all .3s ease;
+        &:hover {
+            fill: #6CAC3D;
+        }
+    }
+
+    &__phone-number {
+        font-family: 'Roboto';
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+        color: #000;
+        transition: color .3s ease;
+        &:hover {
+            color: #6CAC3D;
+        }
+            @media (max-width: 768px) {
+                font-size: 14px;
+            }
+
+    }
+
+    &__work {
+        display: block;
+        margin-top: 5px;
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #171616;
+        @media (max-width: 768px) {
+            font-size: 10px;
+            margin-top: 0;
+        }
+    }
+
+    &__wrapper-tablet {
+        display: none;
+        margin-top: 13px;
+        padding: 14px 0px;
+        border-top: 1px solid #6CAC3D;
+        border-bottom: 1px solid #6CAC3D;
+        @media (max-width: 1120px) {
+            display: block;
+        }
+
+        @media (max-width: 480px) {
+            display: none;
+        }
+    }
+
+    &__social-icon {
+        display: none;
+        align-items: center;
+        @media (max-width: 1120px) {
+            display: flex;
+        }
+
+        @media (max-width:480px) {
+            display: none;
+        }
+    }
+
+    &__social-link:not(:last-child) {
+        margin-right: 15px;
+        
+        @media (max-width: 768px) {
+            margin-right: 5px;
+        }
+    }
+
+    &__btn {
+        padding: 13px 23px;
+        border: 1px solid #6CAC3D;
+        border-radius: 3px;
+        color: #6CAC3D;
+        transition: all .3s ease;
+        &:hover {
+            background: #82C054;
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    &__min-btn {
+        display: none;
+        padding: 9px 20px;
+        background-color: #6CAC3D;
+        border-radius: 3px;
+            &:active {
+                opacity: .7;
+            }
+            @media (max-width: 768px) {
+                display: block;
+            }
+
+    }
+
+    &__min-btn-img {
+        display: block;
+    }
+
+    .viber {
+        transition: fill .3s ease;
+    }
+
+    .viber:hover {
+        fill: #6CAC3D;
+    }
+
+    .whatsapp {
+        transition: fill .3s ease;
+    }
+
+    .whatsapp:hover {
+        fill: #000;
+    }
+}
+
+.burger {
+    position: relative;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+    display: none;
+
+    @media (max-width: 480px) {
+        display: block;
+    }
+  }
+  
+  .burger span,
+  .burger::before,
+  .burger::after {
+    position: absolute;
+    right: 0;
+    height: 17%;
+    width: 100%;
+    border-radius: 1px;
+    transition: all .3s ease;
+    background-color: #2D4872;
+    
+  }
+  
+  .burger::before,
+  .burger::after {
+    content: "";
+    
+  }
+  
+  .burger::before {
+    top: 0; 
+  }
+  
+  .burger::after {
+    bottom: 0;
+  }
+  
+  .burger span {
+    top: 50%;
+    transform: scale(1) translate(0px, -50%);
+  }
+  
+  .burger._active span {
+    transform: scale(0) translate(0px, -50%);
+  }
+  
+  .burger._active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0px, -50%);
+  }
+  
+  .burger._active::after {
+    top: 50%;
+    transform: rotate(45deg) translate(0px, -50%);
+  }
+
+
+.header {
+
+    &__menu-wrapper {
+        margin-top: 24px;
+        padding: 21px 0px;
+        border-top: 1px solid #6CAC3D;
+        border-bottom: 1px solid #6CAC3D;
+        @media (max-width:480px) {
+            display: none;
+        }
+    }
+
+    &__menu {
+        max-width: 1100px;
+    }
+    
+
+    &__menu-list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__menu-item{
+        position: relative;
+    }
+
+    &__menu-item a {
+        transition: color .3s ease;
+        
+        &:hover {
+            color: #6CAC3D;
+        }
+    }
+
+    &__menu-item:hover .header__submenu  {
+        transform: translate(0px 0%);
+        visibility: visible;
+        opacity: 1;
+        pointer-events: all;
+    
+    }
+
+    &__menu-item:hover .menu-link-1::after {
+        top: 6px;
+        transform: rotate(180deg);
+    }
+
+    &__menu-item:hover .menu-link-2::after {
+        top: 6px;
+        transform: rotate(180deg);
+    }
+
+    &__menu-item:hover .menu-link-3::after {
+        top: 6px;
+        transform: rotate(180deg);
+        @media (max-width: 768px) {
+            font-size: 14px;
+            max-width: 100px;
+        }
+    }
+
+    &__menu-link {
+        position: relative;
+        font-family: 'Roboto';
+        font-weight: 500;
+        font-size: 16px;
+        padding: 0px 0px 21px 0px;
+        line-height: 16px;
+        color: #171616;
+        
+    }
+
+    .menu-link-1::after,
+    .menu-link-2::after,
+    .menu-link-3::after {
+        content: "";
+        position: absolute;
+        background-image: url(../img/header-icon/arrow.svg);
+        background-repeat: no-repeat;
+        width: 18px;
+        height: 8px;
+        transform: translate(5px, 7px);
+        transition: all .3s ease;
+        pointer-events: none;
+
+    }
+
+
+    &__submenu {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 40px;
+        left: 0;
+        background-color:#fff;
+        box-shadow: 0px 0px 10px rgba(190, 190, 190, 0.25);
+        padding: 5px;
+        min-width: 210px;
+        transform: translate(0px 10%);
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transition: all .3s ease;
+    }
+
+    &__submenu-1,
+    &__submenu-2 {
+        left: -25px;
+    }
+
+    &__submenu-item {
+        border: 1px solid transparent;
+        border-radius: 3px;
+        transition: all .3s ease;
+        
+        &:hover {
+            border: 1px solid #6CAC3D;
+        }
+    }
+
+    &__submenu-link {
+        display: block;
+        padding: 12px 0px 12px 16px;
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        border: 1px solid transparent;
+        border-radius: 3px;
+        white-space: nowrap;
+        transition: all .3s ease;
+        color: #171616;
+        &:hover {
+            border-color: 1px solid #6CAC3D;
+        }
+        
+    }
+    
+}
+
+// ----------------------------------------- Menu Phone -----------------------------------------
